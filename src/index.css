@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  html { scroll-behavior: smooth; }
+  body { @apply bg-warm text-ink font-sans antialiased overflow-x-hidden; }
+  :focus-visible { @apply outline-none ring-2 ring-saffron ring-offset-2; }
+  h1, h2, h3 { @apply text-royal; }
+}
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
+  .section-y { @apply py-12 sm:py-16 lg:py-20; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition duration-200 min-h-[44px]; }
+  .btn-saffron { @apply bg-saffron text-ink hover:bg-saffron-700 hover:shadow-lift; }
+  .btn-royal { @apply bg-royal text-white hover:bg-royal-700 hover:shadow-lift; }
+  .btn-leaf { @apply bg-leaf text-white hover:bg-leaf-700; }
+  .btn-ghost { @apply border border-white/70 text-white hover:bg-white hover:text-royal; }
+  .btn-outline { @apply border border-royal text-royal hover:bg-royal hover:text-white; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
