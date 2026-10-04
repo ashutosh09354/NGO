@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Hero from '../components/Hero'
-import ImpactIntro from '../components/ImpactIntro'
+// import ImpactIntro from '../components/ImpactIntro' // Restore once the Foundation verifies the figures.
 import About from '../components/About'
 import CausesSection from '../components/CausesSection'
 import FeaturedActivity from '../components/FeaturedActivity'
@@ -20,8 +20,8 @@ import { CAUSES } from '../data/siteData'
 
 export const Home = () => (
   <>
-    <Hero /><ImpactIntro /><About /><CausesSection /><FeaturedActivity />
-    <WorkSection /><MediaSection /><StoriesSection /><VolunteerSection />
+    <Hero />{/* <ImpactIntro /> */}<About /><CausesSection /><FeaturedActivity />
+    <WorkSection /><MediaSection /><StoriesSection />{/* <VolunteerSection /> */}
     <InstagramSection /><CTASection /><ContactForm />
   </>
 )

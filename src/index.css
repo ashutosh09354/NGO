@@ -12,7 +12,12 @@
     padding: 0;
   }
 
-  html { scroll-behavior: smooth; }
+  html {
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  html::-webkit-scrollbar { display: none; }
   body { @apply bg-warm text-ink font-sans antialiased overflow-x-hidden; }
   :focus-visible { @apply outline-none ring-2 ring-saffron ring-offset-2; }
   h1, h2, h3 { @apply text-royal; }

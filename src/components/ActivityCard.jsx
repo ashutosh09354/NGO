@@ -2,11 +2,17 @@ import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Photo from './Photo'
 
-export default function ActivityCard({ title, text, image, date, to = '/work' }) {
+export default function ActivityCard({ title, text, image, video, date, to = '/work' }) {
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-lift">
       <div className="aspect-[4/3] overflow-hidden">
-        <div className="h-full w-full transition duration-500 group-hover:scale-105"><Photo src={image} alt={title} /></div>
+        {video ? (
+          <video className="h-full w-full object-cover" controls playsInline preload="metadata" aria-label={title}>
+            <source src={video} type="video/mp4" />
+          </video>
+        ) : (
+          <div className="h-full w-full transition duration-500 group-hover:scale-105"><Photo src={image} alt={title} /></div>
+        )}
       </div>
       <div className="flex flex-1 flex-col p-4">
         {date && <time className="text-xs font-medium text-leaf-700">{date}</time>}

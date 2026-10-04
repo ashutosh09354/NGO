@@ -6,7 +6,7 @@ import { ImageIcon } from 'lucide-react'
  * added yet, a branded placeholder is shown instead of a broken image.
  * fit="cover" for photographs, fit="contain" for newspaper clippings.
  */
-export default function Photo({ src, alt, fit = 'cover', position = 'center', className = '', eager = false }) {
+export default function Photo({ src, alt, fit = 'cover', position = 'center', className = '', eager = false, onError }) {
   const [failed, setFailed] = useState(false)
   if (failed || !src) {
     return (
@@ -22,7 +22,10 @@ export default function Photo({ src, alt, fit = 'cover', position = 'center', cl
       alt={alt}
       loading={eager ? 'eager' : 'lazy'}
       decoding="async"
-      onError={() => setFailed(true)}
+      onError={() => {
+        setFailed(true)
+        onError?.()
+      }}
       style={{ objectPosition: position }}
       className={`h-full w-full ${fit === 'contain' ? 'object-contain' : 'object-cover'} ${className}`}
     />
