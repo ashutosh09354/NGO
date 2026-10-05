@@ -35,9 +35,9 @@ export const CausesPage = () => (
 export const WorkPage = () => (<><WorkSection /><StoriesSection /><CTASection /></>)
 export const MediaPage = () => (<><MediaSection /><CTASection /></>)
 export const GalleryPage = () => (
-  <section className="section-y"><div className="container-x"><SectionHeading title="Gallery" subtitle="Real people. Real stories. Real impact." /><Gallery /></div></section>
+  <section className="section-y"><div className="container-x"><SectionHeading title="Gallery" subtitle="Real people. Real stories. Real impact." /><Gallery showFilters={false} /></div></section>
 )
-export const ContactPage = () => (<><ContactForm /><InstagramSection /></>)
+export const ContactPage = () => <ContactForm standalone />
 export const DonatePage = () => (<><DonateSection /><CTASection /></>)
 export const NotFound = () => (
   <section className="section-y text-center"><h1 className="text-3xl font-bold">Page not found</h1><Link to="/" className="btn btn-royal mt-6">Back to Home</Link></section>

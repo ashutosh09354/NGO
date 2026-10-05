@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import Photo from './Photo'
 import Reveal from './Reveal'
-import { VOLUNTEER_PHOTOS } from '../data/siteData'
 
 export default function VolunteerSection() {
   return (
@@ -14,12 +13,10 @@ export default function VolunteerSection() {
           <p className="mt-3 max-w-md text-white/85">Change becomes possible when people come together.</p>
           <Link to="/contact#volunteer-form" className="btn btn-saffron mt-6">Become a Volunteer</Link>
         </Reveal>
-        <Reveal delay={0.1} className="grid grid-cols-3 gap-2 sm:gap-4">
-          {VOLUNTEER_PHOTOS.map((v, i) => (
-            <div key={v.image} className={`aspect-[3/4] overflow-hidden rounded-2xl ring-2 ring-white/20 ${i === 1 ? 'mt-6' : ''}`}>
-              <Photo src={v.image} alt={v.alt} position="center 25%" />
-            </div>
-          ))}
+        <Reveal delay={0.1}>
+          <div className="aspect-[16/9] overflow-hidden rounded-2xl ring-2 ring-white/20 shadow-lift">
+            <Photo src="/images/about/About.png" alt="Jan Manav Kalyan Foundation members standing together" position="center 40%" />
+          </div>
         </Reveal>
       </div>
     </section>

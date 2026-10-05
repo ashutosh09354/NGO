@@ -12,7 +12,7 @@ export const ORG = {
   hindiTagline: 'सेवा परमो धर्म:', // shown in the supplied design mockup; confirm with the NGO
   mission:
     'Working for a better tomorrow through education, healthcare, food distribution, blood donation and social welfare.',
-  logo: '/images/media/jankalyan logo .jpeg',
+  logo: '/images/media/jankalyan-logo.png',
 }
 
 export const SOCIAL = {
@@ -22,7 +22,7 @@ export const SOCIAL = {
 }
 
 export const CONTACT = {
-  address: '[ Address — to be provided by the NGO ]',
+  address: '',
   phone: '+91 XXXXX XXXXX', // PLACEHOLDER
   email: 'info@example.org', // PLACEHOLDER
 }
@@ -127,7 +127,7 @@ export const MEDIA = [
 
 export const STORIES = [
   { id: 1, title: 'Foundation Activity', text: 'A moment from our community initiatives.', video: '/images/instagram/insta1.mp4', date: '' },
-  { id: 2, title: 'Foundation Activity', text: 'A moment from our community initiatives.', image: '/images/instagram/insta2.webp', date: '' },
+  { id: 2, title: 'Foundation Activity', text: 'A moment from our community initiatives.', video: '/images/instagram/insta2.mp4', poster: '/images/instagram/insta2.webp', date: '' },
   { id: 3, title: 'Foundation Activity', text: 'A moment from our community initiatives.', image: '/images/instagram/insta3.webp', date: '' },
   { id: 4, title: 'Foundation Activity', text: 'A moment from our community initiatives.', image: '/images/instagram/insta4.webp', date: '' },
   { id: 5, title: 'Foundation Activity', text: 'A moment from our community initiatives.', image: '/images/instagram/insta5.webp', date: '' },
@@ -135,6 +135,7 @@ export const STORIES = [
   { id: 7, title: 'Foundation Activity', text: 'A moment from our community initiatives.', image: '/images/instsgram post/655450985_18155250109444012_2279890235362913082_n..webp', date: '' },
   { id: 8, title: 'Foundation Activity', text: 'A moment from our community initiatives.', image: '/images/instsgram post/655713653_18098869942784421_5885450048993260738_n..webp', date: '' },
   { id: 9, title: 'Foundation Activity', text: 'A moment from our community initiatives.', image: '/images/instsgram post/655987176_18069999431270939_3194857039852054680_n..webp', date: '' },
+  { id: 10, title: 'Foundation Activity', text: 'A moment from our community initiatives.', image: '/images/instsgram post/658380524_18309529420287319_7949303713269082549_n..webp', date: '' },
 ]
 
 export const VOLUNTEER_PHOTOS = [

@@ -31,7 +31,7 @@ export default function Navbar() {
     <header className={`sticky top-0 z-40 w-full transition ${scrolled || open ? 'bg-white/90 shadow-soft backdrop-blur-md' : 'bg-white'}`}>
       <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:rounded focus:bg-white focus:px-3 focus:py-2">Skip to content</a>
       <div className="container-x flex h-16 items-center justify-between sm:h-[72px]">
-        <Logo />
+        <Logo showText={false} />
         <nav aria-label="Main" className="hidden items-center gap-0.5 lg:flex">
           {NAV_LINKS.map((l) => (
             <NavLink key={l.to} to={l.to} end={l.to === '/'} className={linkCls}>{l.label}</NavLink>

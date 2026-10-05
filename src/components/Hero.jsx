@@ -23,8 +23,9 @@ export default function Hero() {
 
       <div className="container-x flex min-h-[560px] flex-col justify-end pb-6 pt-56 sm:min-h-[600px] sm:pt-32 md:justify-center md:pb-24 md:pt-28 lg:min-h-[640px]">
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: 'easeOut' }} className="max-w-xl">
-          <h1 id="hero-title" className="text-4xl font-extrabold leading-[1.1] !text-white sm:text-5xl lg:text-6xl">
-            Together, We Can Create <span className="text-saffron">a Better Tomorrow</span>
+          <h1 id="hero-title" className="text-4xl font-extrabold leading-[1.1] tracking-[0.03em] !text-white sm:text-5xl lg:text-6xl">
+            <span className="inline-block">Together, We Can</span>{' '}
+            <span className="inline-block">Create <span className="text-saffron">a Better Tomorrow</span></span>
           </h1>
           <p className="mt-4 max-w-md text-sm leading-relaxed text-white/90 sm:text-base">
             Jan Manav Kalyan Foundation works to create meaningful change through community service, humanitarian initiatives and collective action.

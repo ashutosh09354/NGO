@@ -5,7 +5,7 @@ import Photo from './Photo'
 import Lightbox from './Lightbox'
 import { WORK, WORK_CATEGORIES } from '../data/siteData'
 
-export default function Gallery({ limit, showFilters = true }) {
+export default function Gallery({ limit, showFilters = true, showCategories = true }) {
   const [cat, setCat] = useState('All')
   const [open, setOpen] = useState(null)
   const [failedImages, setFailedImages] = useState(() => new Set())
@@ -43,7 +43,7 @@ export default function Gallery({ limit, showFilters = true }) {
                   aria-label={`View photo: ${w.title}`}>
                   <div className="h-full w-full transition duration-500 group-hover:scale-105"><Photo src={w.image} alt={`${w.title} - ${w.category}`} onError={() => removeFailedImage(w.id)} /></div>
                   <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-royal/85 via-royal/10 to-transparent p-3 text-left opacity-100 transition sm:opacity-0 sm:group-hover:opacity-100 sm:group-focus-visible:opacity-100">
-                    <span className="mb-1 w-fit rounded-full bg-saffron px-2 py-0.5 text-[10px] font-semibold text-ink">{w.category}</span>
+                    {showCategories && <span className="mb-1 w-fit rounded-full bg-saffron px-2 py-0.5 text-[10px] font-semibold text-ink">{w.category}</span>}
                     <span className="text-sm font-semibold text-white">{w.title}</span>
                     {w.date && <span className="text-xs text-white/80">{w.date}</span>}
                   </div>

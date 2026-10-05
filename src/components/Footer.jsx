@@ -14,7 +14,7 @@ export default function Footer() {
         </div>
         <nav aria-label="Footer" className="md:justify-self-center">
           <p className="mb-3 text-sm font-semibold">Quick Links</p>
-          <ul className="grid grid-cols-2 gap-x-6 gap-y-2 text-sm text-white/80">
+          <ul className="grid grid-cols-2 gap-x-6 gap-y-4 text-sm text-white/80">
             {NAV_LINKS.map((l) => <li key={l.to}><Link to={l.to} className="hover:text-saffron">{l.label}</Link></li>)}
           </ul>
         </nav>

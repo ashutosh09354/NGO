@@ -38,7 +38,7 @@ export default function DonateSection() {
               ))}
             </dl>
           )}
-          <p className="mt-6 text-center text-xs text-ink/55">All payment details above are placeholders until the Foundation provides verified information. Questions? {CONTACT.email}</p>
+       
         </div>
       </div>
     </section>
